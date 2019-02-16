@@ -104,7 +104,7 @@
           <h6 class="dropdown-header">Login Screens:</h6>
           <a class="dropdown-item" href="login.html">Login</a>
           <a class="dropdown-item" href="register.html">Register</a>
-          <a class="dropdown-item" href="forgot-password.html">Forgot Password</a>
+          <a class="dropdown-item" href="forgot-password.php">Forgot Password</a>
           <div class="dropdown-divider"></div>
           <h6 class="dropdown-header">Other Pages:</h6>
           <a class="dropdown-item" href="404.html">404 Page</a>
@@ -112,7 +112,7 @@
         </div>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link" href="sales.php">
           <i class="fas fa-fw fa-chart-area"></i>
           <span>Charts</span></a>
       </li>

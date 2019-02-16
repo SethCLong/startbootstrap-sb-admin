@@ -1,3 +1,5 @@
+<?php
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +11,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin - Login</title>
+  <title>Evil Corp Admin - Login</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -25,32 +27,44 @@
     <div class="card card-login mx-auto mt-5">
       <div class="card-header">Login</div>
       <div class="card-body">
-        <form>
+        <?php if (!empty($_POST['login'])) { ?>
+        <div class="alert alert-danger" role="alert">
+            Invalid username or password!
+	</div>
+        <?php } ?>
+
+        <?php if (!empty($_POST['forgot'])) { ?>
+        <div class="alert alert-success" role="alert">
+            Reset instructions have been sent.
+        </div>
+        <?php } ?>
+	<form method="post" action="login.php">
+          <input type="hidden" name="login" value="1" />
           <div class="form-group">
             <div class="form-label-group">
-              <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="required" autofocus="autofocus">
+              <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required="required" autofocus="autofocus">
               <label for="inputEmail">Email address</label>
             </div>
           </div>
           <div class="form-group">
             <div class="form-label-group">
-              <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="required">
+              <input name="inputPassword" type="password" id="inputPassword" class="form-control" placeholder="Password" required="required">
               <label for="inputPassword">Password</label>
             </div>
           </div>
           <div class="form-group">
             <div class="checkbox">
               <label>
-                <input type="checkbox" value="remember-me">
+                <input name="remember-me" type="checkbox" value="remember-me">
                 Remember Password
               </label>
             </div>
           </div>
-          <a class="btn btn-primary btn-block" href="index.html">Login</a>
+          <input type="submit" class="btn btn-primary btn-block" value="Login" />
         </form>
         <div class="text-center">
-          <a class="d-block small mt-3" href="register.html">Register an Account</a>
-          <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
+          <!-- <a class="d-block small mt-3" href="register.html">Register an Account</a> -->
+          <a class="d-block small mt-3" href="forgot-password.php">Forgot Password?</a>
         </div>
       </div>
     </div>

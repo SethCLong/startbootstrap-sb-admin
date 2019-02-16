@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin - Forgot Password</title>
+  <title>Evil Corp Admin - Forgot Password</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -29,18 +29,19 @@
           <h4>Forgot your password?</h4>
           <p>Enter your email address and we will send you instructions on how to reset your password.</p>
         </div>
-        <form>
+        <form method="post" action="login.php">
+          <input type="hidden" name="forgot" value="1" />
           <div class="form-group">
             <div class="form-label-group">
-              <input type="email" id="inputEmail" class="form-control" placeholder="Enter email address" required="required" autofocus="autofocus">
+              <input name="inputEmail" type="email" id="inputEmail" class="form-control" placeholder="Enter email address" required="required" autofocus="autofocus">
               <label for="inputEmail">Enter email address</label>
             </div>
           </div>
-          <a class="btn btn-primary btn-block" href="login.html">Reset Password</a>
+          <input type="submit" value="Reset Password" class="btn btn-primary btn-block" />
         </form>
         <div class="text-center">
-          <a class="d-block small mt-3" href="register.html">Register an Account</a>
-          <a class="d-block small" href="login.html">Login Page</a>
+          <!-- <a class="d-block small mt-3" href="register.html">Register an Account</a> -->
+          <a class="d-block smalli mt-3" href="login.php">Login Page</a>
         </div>
       </div>
     </div>
